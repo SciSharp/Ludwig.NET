@@ -14,8 +14,10 @@ namespace Ludwig.UnitTest
             train.FullTrain(new TrainArgument
             {
                 DataCsv = "text_classification.csv",
-                ModelDefinition = "{input_features: [{name: doc_text, type: text}], output_features: [{name: class, type: category}]}"
+                //ModelDefinition = "{input_features: [{name: doc_text, type: text}], output_features: [{name: class, type: category}]}"
+                ModelDefinition = "{'input_features': [{'name': 'doc_text', 'type': 'text'}], 'output_features': [{'name': 'class', 'type': 'category'}]}"
             });
         }
     }
 }
+
