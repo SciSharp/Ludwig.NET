@@ -13,7 +13,7 @@ namespace Ludwig.UnitTest
             var train = new Train();
             train.FullTrain(new TrainArgument
             {
-                DataCsv = "D:/tmp/experiment/text_classification.csv",
+                DataCsv = "text_classification.csv",
                 ModelDefinition = "{input_features: [{name: doc_text, type: text}], output_features: [{name: class, type: category}]}"
             });
         }

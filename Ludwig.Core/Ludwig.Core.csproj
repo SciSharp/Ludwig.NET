@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Python.Runtime.NETStandard" Version="3.7.0" />
   </ItemGroup>
 

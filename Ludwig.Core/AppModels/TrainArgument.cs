@@ -12,6 +12,7 @@ namespace Ludwig.Core.AppModels
         public string OutputDirectory { get; set; }
 
         [DisplayName("data_csv")]
+        [ArgumentOptional]
         public string DataCsv { get; set; }
 
         [DisplayName("model_definition")]

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludwig.Core", "Ludwig.Core\Ludwig.Core.csproj", "{3FD98A48-F8E3-4711-8E95-9210851C575B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludwig.UnitTest", "Ludwig.UnitTest\Ludwig.UnitTest.csproj", "{0D51CC8E-256A-470A-90A4-196B0B19ACAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludwig.UnitTest", "Ludwig.UnitTest\Ludwig.UnitTest.csproj", "{0D51CC8E-256A-470A-90A4-196B0B19ACAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
