@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludwig.Core", "Ludwig.Core\Ludwig.Core.csproj", "{3FD98A48-F8E3-4711-8E95-9210851C575B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludwig.UnitTest", "Ludwig.UnitTest\Ludwig.UnitTest.csproj", "{0D51CC8E-256A-470A-90A4-196B0B19ACAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FD98A48-F8E3-4711-8E95-9210851C575B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD98A48-F8E3-4711-8E95-9210851C575B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD98A48-F8E3-4711-8E95-9210851C575B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD98A48-F8E3-4711-8E95-9210851C575B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8CDE5B1-2650-4B10-B363-6CD608D7D19F}
+	EndGlobalSection
+EndGlobal
