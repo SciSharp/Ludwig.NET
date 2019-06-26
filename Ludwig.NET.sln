@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludwig.Core", "Ludwig.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ludwig.UnitTest", "Ludwig.UnitTest\Ludwig.UnitTest.csproj", "{0D51CC8E-256A-470A-90A4-196B0B19ACAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludwig.Examples", "Ludwig.Examples\Ludwig.Examples.csproj", "{01E2B434-7731-4CE1-9BC5-C65FFAF346DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D51CC8E-256A-470A-90A4-196B0B19ACAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01E2B434-7731-4CE1-9BC5-C65FFAF346DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E2B434-7731-4CE1-9BC5-C65FFAF346DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E2B434-7731-4CE1-9BC5-C65FFAF346DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E2B434-7731-4CE1-9BC5-C65FFAF346DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

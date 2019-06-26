@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ludwig.Core.AppModels
 {
-    public class TrainArgument
+    public class LudwigArgs
     {
         [DisplayName("output_directory")]
         [DefaultValue("results")]
@@ -20,6 +20,11 @@ namespace Ludwig.Core.AppModels
             "If it has a split column, it will be used for splitting " +
             "(0: train, 1: validation, 2: test), " +
             "otherwise the dataset will be randomly split")]
+        [ArgumentOptional]
         public string ModelDefinition { get; set; }
+
+        [DisplayName("model_definition_file")]
+        [ArgumentOptional]
+        public string ModelDefinitionFile { get; set; }
     }
 }

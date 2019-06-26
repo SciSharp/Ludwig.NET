@@ -11,11 +11,11 @@ namespace Ludwig.UnitTest
         public void TestMethod1()
         {
             var train = new Train();
-            train.FullTrain(new TrainArgument
+            train.FullTrain(new LudwigArgs
             {
                 DataCsv = "text_classification.csv",
-                //ModelDefinition = "{input_features: [{name: doc_text, type: text}], output_features: [{name: class, type: category}]}"
-                ModelDefinition = "{'input_features': [{'name': 'doc_text', 'type': 'text'}], 'output_features': [{'name': 'class', 'type': 'category'}]}"
+                ModelDefinition = "{input_features: [{name: doc_text, type: text}]}",
+                ModelDefinitionFile = "model_definition.yaml"
             });
         }
     }

@@ -8,7 +8,7 @@ namespace Ludwig.Core
 {
     public class Train
     {
-        public void FullTrain(TrainArgument args)
+        public void FullTrain(LudwigArgs args)
         {
             using (Py.GIL())
             {
@@ -46,11 +46,18 @@ namespace Ludwig.Core
                 //    logging_level = 40,
                 //    debug = False
                 //)
-                var model_definition = Py.CreateScope("asdf").Eval(args.ModelDefinition);
-                var arg = new PyTuple(new PyObject[] {model_definition});
+                //var model_definition = Py.CreateScope("asdf").Eval(args.ModelDefinition);
+                // var arg = new PyTuple(new PyObject[] { args.ModelDefinition });
+
+                var arg = Util.ToTuple(new object[]
+                {
+                    args.ModelDefinition
+                });
+
                 var kwargs = new PyDict();
                 if (args.DataCsv != null) kwargs["data_csv"] = Util.ToPython(args.DataCsv);
-                //if (order != null) kwargs["order"] = ToPython(order);
+                if (args.ModelDefinitionFile != null) kwargs["model_definition_file"] = Util.ToPython(args.ModelDefinitionFile);
+                // if (order != null) kwargs["order"] = ToPython(order);
                 dynamic py = train.InvokeMethod("full_train", arg, kwargs);
             }
         }
