@@ -25,10 +25,11 @@ namespace Ludwig.Core
             ludwig = api.InvokeMethod("LudwigModel", args, kwargs);
         }
 
-        public void train(string data_csv = null)
+        public void train(string data_csv = null, LogLevel logging_level = LogLevel.INFO)
         {
             var kwargs = new PyDict();
             if (data_csv != null) kwargs["data_csv"] = Util.ToPython(data_csv);
+            kwargs["logging_level"] = Util.ToPython(logging_level);
             ludwig = ludwig.InvokeMethod("train", new PyTuple(), kwargs);
         }
 

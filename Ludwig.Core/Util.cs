@@ -1,4 +1,5 @@
-﻿using Python.Runtime;
+﻿using Ludwig.Core.AppModels;
+using Python.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,6 +31,7 @@ namespace Ludwig.Core
                 case string o: return new PyString(o);
                 case bool o: return ConverterExtension.ToPython(o);
                 case PyObject o: return o;
+                case LogLevel o: return new PyInt((int)o);
                 // sequence types
                 case Array o: return ToTuple(o);
                 default: throw new NotImplementedException($"Type is not yet supported: { obj.GetType().Name}. Add it to 'ToPythonConversions'");

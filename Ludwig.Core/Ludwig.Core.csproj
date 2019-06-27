@@ -2,11 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1</Version>
+    <Description>Ludwig is a toolbox built on top of TensorFlow that allows to train and test deep learning models without the need to write code.</Description>
+    <PackageId>Ludwig.NET</PackageId>
+    <Authors>Haiping Chen</Authors>
+    <Company>SciSharp STACK</Company>
+    <Product>Ludwig.NET</Product>
+    <PackageProjectUrl>https://github.com/SciSharp/Ludwig.NET</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/44989469?s=200&amp;v=4</PackageIconUrl>
+    <RepositoryUrl>https://github.com/SciSharp/Ludwig.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>AI, ML, NLP</PackageTags>
+    <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+    <Copyright>Apache 2.0</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Python.Runtime.NETStandard" Version="3.7.0" />
+    <PackageReference Include="TensorFlow.NET" Version="0.8.3" />
   </ItemGroup>
 
 </Project>
