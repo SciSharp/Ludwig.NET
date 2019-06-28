@@ -9,33 +9,56 @@ namespace Ludwig.Core
 {
     public class LudwigModel : IDisposable
     {
-        GILState gil;
-        PyObject ludwig;
+        dynamic ludwig_model;
+
+        public LudwigModel(dynamic lud)
+        {
+            ludwig_model = lud;
+        }
 
         public LudwigModel(string model_definition_file)
         {
-            gil = GIL();
-            var api = Import("ludwig.api");
-            var args = Util.ToTuple(new object[]
-                {
-                    model_definition_file
-                });
-            var kwargs = new PyDict();
-            kwargs["model_definition_file"] = Util.ToPython(model_definition_file);
-            ludwig = api.InvokeMethod("LudwigModel", args, kwargs);
+            using (GIL())
+            {
+                PyObject api = Import("ludwig.api");
+                var args = Util.ToTuple(new object[]
+                    {
+                        model_definition_file
+                    });
+                var kwargs = new PyDict();
+                kwargs["model_definition_file"] = Util.ToPython(model_definition_file);
+                ludwig_model = api.InvokeMethod("LudwigModel", args, kwargs);
+            }
         }
 
-        public void train(string data_csv = null, LogLevel logging_level = LogLevel.INFO)
+        public void Train(string data_csv = null, LogLevel logging_level = LogLevel.INFO)
         {
             var kwargs = new PyDict();
             if (data_csv != null) kwargs["data_csv"] = Util.ToPython(data_csv);
             kwargs["logging_level"] = Util.ToPython(logging_level);
-            ludwig = ludwig.InvokeMethod("train", new PyTuple(), kwargs);
+            ludwig_model = ludwig_model.InvokeMethod("train", new PyTuple(), kwargs);
+        }
+
+        public void Predict(string data_csv)
+        {
+            var predictions = ludwig_model.predict(data_csv: data_csv);
+            //predictions['class']['predictions'];
+        }
+
+        public static LudwigModel Load(string model_dir)
+        {
+            using(GIL())
+            {
+                dynamic api = PythonEngine.ImportModule("ludwig.api");
+                var lud = api.LudwigModel.load(model_dir);
+
+                return new LudwigModel(lud);
+            }
         }
 
         public void Dispose()
         {
-            gil.Dispose();
+            ludwig_model.close();
         }
     }
 }
