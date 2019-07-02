@@ -8,9 +8,11 @@ namespace Ludwig.Examples
     {
         static void Main(string[] args)
         {
-            // var ludwig = new LudwigModel("model_definition.yaml");
-            // ludwig.Train(data_csv: "text_classification.csv");
-            var ludwig = LudwigModel.Load("results/api_experiment_run_4/model");
+            var ludwig = new LudwigModel("model_definition.yaml");
+            //ludwig.Train(data_csv: "text_classification.csv");
+            //ludwig.Save("model");
+            ludwig = LudwigModel.Load("model");
+            //ludwig.Test("text_classification_predict.csv");
             ludwig.Predict("text_classification_predict.csv");
 
             Console.ReadLine();

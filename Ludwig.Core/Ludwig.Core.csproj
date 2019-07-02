@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="Numpy.Bare" Version="3.7.1.4" />
     <PackageReference Include="Python.Included" Version="3.7.3" />
     <PackageReference Include="TensorFlow.NET" Version="0.8.3" />
   </ItemGroup>
